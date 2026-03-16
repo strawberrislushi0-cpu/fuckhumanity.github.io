@@ -3,15 +3,56 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Website</title>
 
-<div>
-<title id="title"></title>
-  
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="sprites/icon.ico">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    min-height: 100vh;
+
+    background-image: url("images/background.png");
+    background-size: cover;
+}
+
+.panel {
+    margin-top: 50vh;
+
+    background: rgba(255,255,255,0.9);
+    padding: 40px;
+
+    border-radius: 10px;
+    width: 400px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="panel">
+
+<h1 id="head">My Website</h1>
+
+<p>Welcome to my site.</p>
+
+<p id="result"></p>
+
 </div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
