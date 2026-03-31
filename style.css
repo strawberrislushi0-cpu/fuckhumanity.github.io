@@ -2,22 +2,3 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
-/* Top panel */
-.panel {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 80px;
-
-    background: #333;
-    color: black;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-}
