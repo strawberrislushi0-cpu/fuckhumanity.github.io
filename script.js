@@ -17,6 +17,31 @@ async function login() {
   document.getElementById("chat").style.display = "block";
 }
 
+async function signup() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  try {
+    const user = await account.create(
+      ID.unique(),
+      email,
+      password
+    );
+
+    console.log("User created:", user);
+
+    // Automatically log them in
+    await account.createEmailSession(email, password);
+
+    // Switch UI
+    document.getElementById("auth").style.display = "none";
+    document.getElementById("chat").style.display = "block";
+
+  } catch (err) {
+    alert("Signup failed: " + err.message);
+  }
+}
+
 async function sendMessage() {
   const text = document.getElementById("messageInput").value;
 
