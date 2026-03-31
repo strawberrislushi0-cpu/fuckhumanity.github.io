@@ -1,44 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Free Lemons</title>
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    min-height: 100vh;
-}
-
-.panel {
-    margin-top: 50vh;
-
-    background: rgba(255,255,255,0.9);
-    padding: 40px;
-
-    border-radius: 10px;
-    width: 400px;
-
-    text-align: center;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-</style>
-
+  <title>Free Lemons 💛</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<script src="script.js"></script>
+  <div class="container">
+    <h1>Free Lemons 🍋</h1>
 
+    <!-- Login -->
+    <div id="auth">
+      <input id="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+    </div>
+
+    <!-- Chat -->
+    <div id="chat" style="display:none;">
+      <div id="messages"></div>
+
+      <input id="messageInput" placeholder="Say something...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
