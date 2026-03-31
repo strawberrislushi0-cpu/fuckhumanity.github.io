@@ -34,8 +34,8 @@ async function signup() {
 
     // 3. Create user_meta entry (THIS is what you add)
     await databases.createDocument(
-      "DB_ID",
-      "users_meta",
+      "69cbfdfd000805ac7533",
+      "login",
       ID.unique(),
       {
         userId: user.$id,
