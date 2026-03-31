@@ -22,18 +22,28 @@ async function signup() {
   const password = document.getElementById("password").value;
 
   try {
+    // 1. Create account
     const user = await account.create(
       ID.unique(),
       email,
       password
     );
 
-    console.log("User created:", user);
-
-    // Automatically log them in
+    // 2. Log them in
     await account.createEmailSession(email, password);
 
-    // Switch UI
+    // 3. Create user_meta entry (THIS is what you add)
+    await databases.createDocument(
+      "DB_ID",
+      "users_meta",
+      ID.unique(),
+      {
+        userId: user.$id,
+        pairCode: Math.random().toString(36).substring(2, 8)
+      }
+    );
+
+    // 4. Switch UI
     document.getElementById("auth").style.display = "none";
     document.getElementById("chat").style.display = "block";
 
